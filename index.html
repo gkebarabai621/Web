@@ -1,0 +1,612 @@
+HTML
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gereja Kalimantan Evangelis (GKE)</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Playfair Display & Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .font-serif { font-family: 'Playfair Display', serif; }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 scroll-smooth overflow-x-hidden w-full relative">
+    <!-- NAVBAR -->
+    <nav class="bg-slate-900 text-white sticky top-0 z-40 shadow-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <div class="flex items-center space-x-3">
+                    <div class="w-10 h-10 bg-amber-500 rounded-full flex items-center justify-center font-bold text-slate-900 flex-shrink-0">GKE</div>
+                    <div>
+                        <span class="font-serif text-lg md:text-xl font-bold block tracking-wide">GKE BARABAI</span>
+                        <span class="text-[10px] md:text-xs text-gray-400 block -mt-1">Gereja Kalimantan Evangelis</span>
+                    </div>
+                </div>
+                <!-- Desktop Menu -->
+                <div class="hidden lg:flex space-x-6 text-sm font-medium items-center">
+                    <a href="#home" class="hover:text-amber-400 transition">Beranda</a>
+                    <a href="#sejarah" class="hover:text-amber-400 transition">Sejarah</a>
+                    <a href="#pelayanan-minggu" class="hover:text-amber-400 transition">Jadwal & Liturgi</a>
+                    <a href="#jadwal" class="hover:text-amber-400 transition">Kategorial</a>
+                    <a href="#galeri" class="hover:text-amber-400 transition">Galeri</a>
+                    <a href="#kontak" class="hover:text-amber-400 transition">Kontak</a>
+                    <a href="#pendaftaran" class="bg-amber-500 text-slate-900 px-4 py-2 rounded font-semibold hover:bg-amber-400 transition">Daftar Jemaat</a>
+                </div>
+                <!-- Mobile Menu Button -->
+                <div class="lg:hidden flex items-center">
+                    <button id="menuBtn" class="text-gray-200 hover:text-white focus:outline-none p-2" aria-label="Toggle Menu">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Dropdown Menu -->
+        <div id="mobileMenu" class="hidden lg:hidden bg-slate-900 border-t border-slate-800 px-4 pt-2 pb-4 space-y-2 text-sm">
+            <a href="#home" class="block py-2 hover:text-amber-400 transition" onclick="toggleMenu()">Beranda</a>
+            <a href="#sejarah" class="block py-2 hover:text-amber-400 transition" onclick="toggleMenu()">Sejarah</a>
+            <a href="#pelayanan-minggu" class="block py-2 hover:text-amber-400 transition" onclick="toggleMenu()">Jadwal dan Liturgi</a>
+            <a href="#jadwal" class="block py-2 hover:text-amber-400 transition" onclick="toggleMenu()">Jadwal Ibadah Kategorial</a>
+            <a href="#galeri" class="block py-2 hover:text-amber-400 transition" onclick="toggleMenu()">Galeri</a>
+            <a href="#kontak" class="block py-2 hover:text-amber-400 transition" onclick="toggleMenu()">Kontak</a>
+            <a href="#pendaftaran" class="block text-center bg-amber-500 text-slate-900 py-2 rounded font-semibold hover:bg-amber-400 transition" onclick="toggleMenu()">Daftar Jemaat</a>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <header id="home" class="relative bg-slate-900 text-white min-h-[85vh] py-16 md:py-24 flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 opacity-40 bg-[url('IBADAH.jpeg')] bg-cover bg-center"></div>
+        <div class="relative z-10 text-center max-w-3xl px-6 flex flex-col items-center justify-center h-full">
+            <p class="text-amber-400 tracking-widest uppercase font-semibold text-xs md:text-sm mb-3">Selamat Datang di Website Resmi</p>
+            <h1 class="font-serif text-3xl md:text-6xl font-bold mb-4 md:mb-6 leading-tight">Gereja Kalimantan Evangelis</h1>
+            <p class="text-sm md:text-lg text-gray-300 italic mb-4 leading-relaxed">Sub Tema: "Menjadi Bapak Sebagai Pemimpin Rohani, Teladan dan Pengajar Dalam Keluarga"</p>
+            <p class="text-xs md:text-sm text-amber-300 italic mb-8 max-w-2xl leading-relaxed">"Karena begitu besar kasih Allah akan dunia ini, sehingga Ia telah mengkaruniakan Anak-Nya yang tunggal, supaya setiap orang yang percaya kepada-Nya tidak binasa, melainkan beroleh hidup yang kekal." (Yohanes 3:16)</p>
+            <a href="#pelayanan-minggu" class="border-2 border-amber-500 text-amber-400 px-5 py-2.5 md:px-6 md:py-3 rounded-full text-xs md:text-sm font-semibold hover:bg-amber-500 hover:text-slate-900 transition duration-300 inline-block">Lihat Jadwal Ibadah</a>
+        </div>
+    </header>
+
+    <!-- SEJARAH SECTION -->
+    <section id="sejarah" class="py-16 md:py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="font-serif text-3xl md:text-4xl font-bold text-slate-900">Sejarah Berdirinya GKE</h2>
+                <div class="w-16 h-1 bg-amber-500 mx-auto mt-4"></div>
+            </div>
+            <div class="grid lg:grid-cols-3 gap-8 lg:gap-12 items-start">
+                <div class="lg:col-span-2 space-y-6">
+                    <div class="space-y-4 text-gray-600 leading-relaxed text-justify text-sm md:text-base">
+                        <p>Gereja Kalimantan Evangelis (GKE) merupakan salah satu rumpun gereja Protestan di Indonesia yang berakar dari misi <strong>Rheinische Missionsgesellschaft (RMG)</strong> asal Jerman yang tiba di Kalimantan pada tanggal 4 April 1835.</p>
+                        <p>Awalnya dikenal dengan nama Gereja Dayak Evangelis (GDE) pada tahun 1935, gereja ini kemudian berkembang pesat dan bermutasi menjadi GKE pada April 1950 untuk menegaskan panggilannya yang inklusif bagi seluruh masyarakat di pulau Kalimantan tanpa memandang latar belakang suku.</p>
+                        <p>Hingga saat ini, GKE terus berkomitmen menjadi garam dan terang dunia, membawa damai sejahtera Kristus di bumi Borneo.</p>
+                    </div>
+                    <!-- PORTAL BERKAT -->
+                    <div class="mt-8 p-4 md:p-6 bg-amber-50 rounded-2xl border border-amber-200 shadow-sm overflow-hidden">
+                        <h4 class="font-serif text-lg font-bold text-slate-900 flex items-center gap-2 mb-3">
+                            <span>💝</span> Portal Berkat
+                        </h4>
+                        <div class="text-xs md:text-sm text-slate-700 space-y-3 leading-relaxed">
+                            <p>Kami membuka Portal Berkat bagi anda yang ingin Memberkati Pelayanan melalui Gift.</p>
+                            <div class="bg-white p-3 md:px-4 md:py-3 rounded-lg border border-amber-100 flex flex-col sm:flex-row sm:justify-between gap-2 sm:items-center">
+                                <span class="break-words">Silahkan kirim berkat anda melalui <strong>Rekening MANDIRI</strong>:<br class="sm:hidden"> BONARTHA WIBOWO SIMAREMARE</span>
+                                <span class="font-mono bg-slate-100 text-slate-800 px-2 py-1 rounded font-bold text-sm select-all whitespace-nowrap self-start sm:self-auto">1060022465762</span>
+                            </div>
+                            <div class="bg-white p-3 md:px-4 md:py-3 rounded-lg border border-amber-100 flex flex-col sm:flex-row sm:justify-between gap-2 sm:items-center">
+                                <span>Silahkan kirim laporan dan bukti anda ke <strong>WhatsApp</strong>:</span>
+                                <a href="https://wa.me/6283853293150" target="_blank" class="text-emerald-600 hover:underline font-bold flex items-center gap-1 self-start sm:self-auto">
+                                    0838-5329-3150 📲
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-gray-100 p-6 md:p-8 rounded-xl border-l-4 border-amber-500 shadow-sm lg:sticky lg:top-24">
+                    <h3 class="font-serif text-xl font-bold text-slate-900 mb-4">Visi & Misi GKE</h3>
+                    <p class="text-gray-700 italic mb-4 text-sm md:text-base">"Membangun Komunitas yang Bertumbuh dalam Kasih, Melayani dengan Hati, dan Menjadi Berkat bagi Semua."</p>
+                    <ul class="list-disc list-inside text-gray-600 space-y-2 text-xs md:text-sm">
+                        <li>Mengajarkan Firman dengan Setia.</li>
+                        <li>Melayani dengan Kasih.</li>
+                        <li>Menjadi Berkat bagi Semua.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PELAYANAN HARI MINGGU -->
+    <section id="pelayanan-minggu" class="py-16 md:py-20 bg-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-10 text-center md:text-left">
+                <h2 class="text-2xl md:text-3xl font-bold text-[#1e3a5f] tracking-wide font-serif">Jadwal dan Liturgi Ibadah Oktober 2026</h2>
+                <div class="w-16 h-[3px] bg-[#c29b53] mt-2 mx-auto md:mx-0"></div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+                <!-- MINGGU, 4 OKTOBER 2026 -->
+                <div class="bg-white rounded-[24px] md:rounded-[32px] p-6 md:p-8 shadow-sm border border-slate-100 flex flex-col justify-between min-h-[280px]">
+                    <div>
+                        <h3 class="text-lg md:text-xl font-bold text-[#1e3a5f] mb-3">Minggu, 4 Oktober 2026</h3>
+                        <span class="inline-block bg-[#f3f4f6] text-[#374151] text-[11px] font-semibold px-3 py-1 rounded-full mb-4">
+                            Liturgi Khusus: Hari Perjamuan Kudus Sedunia & Pekabaran Injil Indonesia / Putih
+                        </span>
+                        <div class="text-slate-700 text-xs md:text-sm space-y-2 mb-3">
+                            <p><span class="font-bold">Pengkhotbah:</span> Pdt. Siska Pingamiani, S.Th</p>
+                            <p><span class="font-bold">Liturgos:</span> Mahasiswa PPG</p>
+                        </div>
+                        <div class="bg-[#fffbeb] border-l-4 border-[#d97706] p-3 md:p-4 text-xs md:text-sm text-slate-700 rounded-r-lg">
+                            <span class="font-bold">Catatan:</span> Petugas Ibadah oleh <span class="font-bold">Majelis Jemaat</span>. Lagu-lagu tersedia di liturgi khusus.
+                        </div>
+                    </div>
+                    <div class="mt-6">
+                        <button onclick="openModal('modal-4oktober')" class="w-full sm:w-auto bg-[#023047] hover:bg-[#072231] text-white text-xs font-semibold px-5 py-3 rounded-lg transition duration-200">
+                            Lihat Detail Pelayanan
+                        </button>
+                    </div>
+                </div>
+
+                <!-- MINGGU, 11 OKTOBER 2026 -->
+                <div class="bg-white rounded-[24px] md:rounded-[32px] p-6 md:p-8 shadow-sm border border-slate-100 flex flex-col justify-between min-h-[280px]">
+                    <div>
+                        <h3 class="text-lg md:text-xl font-bold text-[#1e3a5f] mb-3">Minggu, 11 Oktober 2026</h3>
+                        <span class="inline-block bg-[#ecfdf5] text-[#047857] text-[11px] font-semibold px-3 py-1 rounded-full mb-4">
+                            Liturgi: Hari Minggu Bentuk II / Hijau
+                        </span>
+                        <div class="text-slate-700 text-xs md:text-sm space-y-2">
+                            <p><span class="font-bold">Pengkhotbah:</span> Pertukaran Mimbar</p>
+                            <p class="font-bold mt-2">Pembacaan Alkitab:</p>
+                            <ul class="list-disc list-inside space-y-1 text-slate-600 pl-1">
+                                <li>Pembacaan Alkitab: Keluaran 32:1-14</li>
+                                <li>Pemberitaan Firman: Matius 22:1-14</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="mt-6">
+                        <button onclick="openModal('modal-11oktober')" class="w-full sm:w-auto bg-[#023047] hover:bg-[#072231] text-white text-xs font-semibold px-5 py-3 rounded-lg transition duration-200">
+                            Lihat Alur Liturgi Lengkap
+                        </button>
+                    </div>
+                </div>
+
+                <!-- MINGGU, 18 OKTOBER 2026 -->
+                <div class="bg-white rounded-[24px] md:rounded-[32px] p-6 md:p-8 shadow-sm border border-slate-100 flex flex-col justify-between min-h-[280px]">
+                    <div>
+                        <h3 class="text-lg md:text-xl font-bold text-[#1e3a5f] mb-3">Minggu, 18 Oktober 2026</h3>
+                        <span class="inline-block bg-[#ecfdf5] text-[#047857] text-[11px] font-semibold px-3 py-1 rounded-full mb-4">
+                            Liturgi: Hari Minggu Bentuk III / Hijau
+                        </span>
+                        <div class="text-slate-700 text-xs md:text-sm space-y-2">
+                            <p><span class="font-bold">Pengkhotbah:</span> Mahasiswa PPG</p>
+                            <p class="font-bold mt-2">Pembacaan Alkitab:</p>
+                            <ul class="list-disc list-inside space-y-1 text-slate-600 pl-1">
+                                <li>Pembacaan Alkitab: Mazmur 24:1-10</li>
+                                <li>Pemberitaan Firman: Matius 22:15-22</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="mt-6">
+                        <button onclick="openModal('modal-18oktober')" class="w-full sm:w-auto bg-[#023047] hover:bg-[#072231] text-white text-xs font-semibold px-5 py-3 rounded-lg transition duration-200">
+                            Lihat Alur Liturgi Lengkap
+                        </button>
+                    </div>
+                </div>
+
+                <!-- MINGGU, 25 OKTOBER 2026 -->
+                <div class="bg-white rounded-[24px] md:rounded-[32px] p-6 md:p-8 shadow-sm border border-slate-100 flex flex-col justify-between min-h-[280px]">
+                    <div>
+                        <h3 class="text-lg md:text-xl font-bold text-[#1e3a5f] mb-3">Minggu, 25 Oktober 2026</h3>
+                        <span class="inline-block bg-[#f3f4f6] text-[#374151] text-[11px] font-semibold px-3 py-1 rounded-full mb-4">
+                            Liturgi Khusus: Hari Reformasi & Hari Bapak GKE / Putih
+                        </span>
+                        <div class="text-slate-700 text-xs md:text-sm space-y-2 mb-3">
+                            <p><span class="font-bold">Pengkhotbah:</span> Pdt. Siska Pingamiani, S.Th</p>
+                            <p><span class="font-bold">Liturgos:</span> Bpk. Alexander T.H Sibarani</p>
+                        </div>
+                        <div class="bg-[#fffbeb] border-l-4 border-[#d97706] p-3 md:p-4 text-xs md:text-sm text-slate-700 rounded-r-lg">
+                            <span class="font-bold">Catatan:</span> Petugas ibadah dilaksanakan oleh <span class="font-bold">Kaum Bapak</span>. Lagu-lagu tersedia di liturgi khusus.
+                        </div>
+                    </div>
+                    <div class="mt-6">
+                        <button onclick="openModal('modal-25oktober')" class="w-full sm:w-auto bg-[#023047] hover:bg-[#072231] text-white text-xs font-semibold px-5 py-3 rounded-lg transition duration-200">
+                            Lihat Detail Pelayanan
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- IBADAH RUMAH TANGGA & KATEGORIAL -->
+    <section id="jadwal" class="py-16 md:py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="font-serif text-3xl md:text-4xl font-bold text-slate-900">Ibadah Rumah Tangga & Kategorial Oktober 2026</h2>
+                <div class="w-16 h-1 bg-amber-500 mx-auto mt-4"></div>
+            </div>
+            <div class="grid lg:grid-cols-2 gap-6 md:gap-8">
+                <!-- IBADAH RUMAH TANGGA -->
+                <div class="bg-slate-50 p-6 md:p-8 rounded-xl shadow-xs border border-gray-100">
+                    <div class="flex items-center space-x-3 mb-6">
+                        <span class="p-3 bg-amber-100 text-amber-700 rounded-lg font-bold">🏠</span>
+                        <h3 class="text-xl font-bold text-slate-900">Ibadah Rumah Tangga</h3>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="bg-white p-4 rounded-lg border-l-4 border-emerald-500 shadow-xs">
+                            <p class="text-[10px] text-gray-500 font-semibold mb-1">SABTU, 03/10/2026 | 17.00 WITA</p>
+                            <h4 class="font-bold text-slate-800 text-sm md:text-base">Kel. Reno A Nababan</h4>
+                            <p class="text-xs text-slate-600 mt-1.5">Petugas: Pdt. Siska P / Dkn. Kristina Sihaloho</p>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg border-l-4 border-amber-500 shadow-xs">
+                            <p class="text-[10px] text-gray-500 font-semibold mb-1">SABTU, 10/10/2026 | 17.00 WITA</p>
+                            <h4 class="font-bold text-slate-800 text-sm md:text-base">Kel. Dwi Puji Nugrahanto / Mama Putri</h4>
+                            <p class="text-xs text-slate-600 mt-1.5">Petugas: Mhs PPG / Pnt. Damaris B</p>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg border-l-4 border-indigo-500 shadow-xs">
+                            <p class="text-[10px] text-gray-500 font-semibold mb-1">SABTU, 17/10/2026 | 17.00 WITA</p>
+                            <h4 class="font-bold text-slate-800 text-sm md:text-base">Kel. St Ferry.D.M. Hutapea</h4>
+                            <p class="text-xs text-slate-600 mt-1.5">Petugas: Pdt. Siska P / Pnt. C Sembiring</p>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg border-l-4 border-rose-500 shadow-xs">
+                            <p class="text-[10px] text-gray-500 font-semibold mb-1">SABTU, 24/10/2026 | 17.00 WITA</p>
+                            <h4 class="font-bold text-slate-800 text-sm md:text-base">Kel. Aroza TR Gea</h4>
+                            <p class="text-xs text-slate-600 mt-1.5">Petugas: Mhs PPG / Dkn. Robert T</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- IBADAH SEKSI KATEGORIAL -->
+                <div class="bg-slate-50 p-6 md:p-8 rounded-xl shadow-xs border border-gray-100">
+                    <div class="flex items-center space-x-3 mb-6">
+                        <span class="p-3 bg-amber-100 text-amber-700 rounded-lg font-bold">👥</span>
+                        <h3 class="text-xl font-bold text-slate-900">Ibadah Seksi Kategorial & Pelayanan</h3>
+                    </div>
+                    <div class="space-y-4 text-xs md:text-sm text-gray-600">
+                        <div class="border-b pb-3">
+                            <p class="font-semibold text-slate-800">Ibadah SPPER</p>
+                            <p class="text-xs text-gray-500 mt-0.5">• Minggu, 04/10/2026 (16.30 WITA) - Petugas: Pendeta/Ny.</p>
+                            <p class="text-xs text-gray-500 mt-0.5">• Minggu, 18/10/2026 (16.30 WITA) - Petugas: Mhs PPG</p>
+                        </div>
+                        <div class="border-b pb-3">
+                            <p class="font-semibold text-slate-800">Ibadah SPB</p>
+                            <p class="text-xs text-gray-500 mt-0.5">Minggu, 25/10/2026 (17.00 WITA) | Tempat: Pastori | Petugas: Mahasiswa PPG (Gresia Putri) P/SPB</p>
+                        </div>
+                        <div class="border-b pb-3">
+                            <p class="font-semibold text-slate-800">SPPR dan Pendidikan Agama Kristen (PAK)</p>
+                            <p class="text-xs text-gray-500 mt-0.5">Setiap Hari Jumat (14.00 WITA) | Tempat: Gd. Gereja Oikumene Alfa & Omega | Pendamping: Mahasiswa PPG (Gresia Putri)</p>
+                        </div>
+                        <div class="pb-1">
+                            <p class="font-semibold text-slate-800">Sekolah Hari Minggu (SHM)</p>
+                            <p class="text-xs text-gray-500 mt-0.5 leading-relaxed">Setiap Hari Minggu (08.00 WITA) | Tempat: Gd. Gereja Oikumene Alfa & Omega Yonif 621/MTG | Petugas: Guru SHM</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GALERI KEGIATAN -->
+    <section id="galeri" class="py-16 md:py-20 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="font-serif text-3xl md:text-4xl font-bold text-slate-900">Galeri Kegiatan</h2>
+                <div class="w-16 h-1 bg-amber-500 mx-auto mt-4"></div>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="group relative overflow-hidden rounded-xl shadow-xs bg-white border border-slate-100 flex flex-col">
+                    <img src="KEBERSAMAAN SPPR.jpeg" alt="Kebersamaan Jemaat SPPER" class="w-full h-52 md:h-56 object-cover transform group-hover:scale-105 transition duration-500">
+                    <div class="p-4 bg-white flex-grow">
+                        <h4 class="font-bold text-slate-900 text-sm mb-1">Kebersamaan Jemaat SPPER</h4>
+                        <p class="text-slate-600 text-xs leading-relaxed">Kebersamaan dan sukacita pelayanan kaum perempuan SPPER GKE Barabai di altar gereja.</p>
+                    </div>
+                </div>
+                <div class="group relative overflow-hidden rounded-xl shadow-xs bg-white border border-slate-100 flex flex-col">
+                    <img src="PELAYANAN SPPR.jpeg" alt="Petugas Liturgos SPPER" class="w-full h-52 md:h-56 object-cover transform group-hover:scale-105 transition duration-500">
+                    <div class="p-4 bg-white flex-grow">
+                        <h4 class="font-bold text-slate-900 text-sm mb-1">Pelayan Liturgi Hari Perempuan GKE</h4>
+                        <p class="text-slate-600 text-xs leading-relaxed">Para petugas liturgos dari seksi SPPER yang melayani ibadah khusus dengan hikmat.</p>
+                    </div>
+                </div>
+                <div class="group relative overflow-hidden rounded-xl shadow-xs bg-white border border-slate-100 flex flex-col">
+                    <img src="BERKAT DOORPRIZE.jpeg" alt="Penerima Berkat" class="w-full h-52 md:h-56 object-cover transform group-hover:scale-105 transition duration-500">
+                    <div class="p-4 bg-white flex-grow">
+                        <h4 class="font-bold text-slate-900 text-sm mb-1">Penyerahan Berkat</h4>
+                        <p class="text-slate-600 text-xs leading-relaxed">Sukacita para anggota SPPER saat menerima bingkisan kasih apresiasi dalam kegiatan jemaat.</p>
+                    </div>
+                </div>
+                <div class="group relative overflow-hidden rounded-xl shadow-xs bg-white border border-slate-100 flex flex-col">
+                    <img src="BERKAT.jpeg" alt="Momen Syukuran" class="w-full h-52 md:h-56 object-cover transform group-hover:scale-105 transition duration-500">
+                    <div class="p-4 bg-white flex-grow">
+                        <h4 class="font-bold text-slate-900 text-sm mb-1">Momen Syukuran Bersama</h4>
+                        <p class="text-slate-600 text-xs leading-relaxed">Foto bersama pendeta dan majelis jemaat dalam acara pemotongan tumpeng penuh ucapan syukur.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- KONTAK SECTION -->
+    <section id="kontak" class="py-16 md:py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="font-serif text-3xl md:text-4xl font-bold text-slate-900">Hubungi Kami</h2>
+                <p class="text-sm text-gray-500 mt-2 px-4">Dapatkan informasi lebih lanjut mengenai pelayanan, jadwal, atau lokasi GKE</p>
+                <div class="w-16 h-1 bg-amber-500 mx-auto mt-4"></div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 items-stretch">
+                <div class="space-y-4 md:space-y-6 flex flex-col justify-between">
+                    <div class="bg-slate-50 p-5 rounded-2xl border border-slate-100 flex items-start space-x-4 flex-grow">
+                        <span class="p-3 bg-amber-100 text-amber-700 rounded-xl text-lg flex-shrink-0">📍</span>
+                        <div>
+                            <h4 class="font-bold text-slate-900 text-sm md:text-base">Alamat Gereja</h4>
+                            <p class="text-xs md:text-sm text-slate-600 mt-1 leading-relaxed">Gd. Gereja Oikumene Alfa & Omega, Jln. Jenderal Sudirman, Yonif 621/MTG, Barabai, Kalimantan Selatan.</p>
+                        </div>
+                    </div>
+                    <div class="bg-slate-50 p-5 rounded-2xl border border-slate-100 flex items-start space-x-4 flex-grow">
+                        <span class="p-3 bg-amber-100 text-amber-700 rounded-xl text-lg flex-shrink-0">📞</span>
+                        <div>
+                            <h4 class="font-bold text-slate-900 text-sm md:text-base">Telepon / WhatsApp</h4>
+                            <p class="text-xs md:text-sm text-slate-600 mt-1">+62 838-5329-3150 (Informator)</p>
+                            <p class="text-xs md:text-sm text-slate-600">+62 821-9876-5432 (Pastori)</p>
+                        </div>
+                    </div>
+                    <div class="bg-slate-50 p-5 rounded-2xl border border-slate-100 flex items-start space-x-4 flex-grow">
+                        <span class="p-3 bg-amber-100 text-amber-700 rounded-xl text-lg flex-shrink-0">✉️</span>
+                        <div>
+                            <h4 class="font-bold text-slate-900 text-sm md:text-base">Email Resmi</h4>
+                            <p class="text-xs md:text-sm text-slate-600 mt-1 break-all">gerejakalimantanevangelisbrb@gmail.com</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full h-64 md:h-full min-h-[250px] rounded-2xl overflow-hidden shadow-xs border border-slate-200">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3983.5938555237885!2d115.37894567586683!3d-2.5833446973943343!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2df328ff96a1aef5%3A0x60012921da8a1fb7!2sYonif%20621%2FManuntung!5e0!3m2!1sid!2sid!4v1710000000000!5m2!1sid!2sid" 
+                        class="w-full h-full border-0" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+                <div class="bg-slate-50 p-6 md:p-8 rounded-2xl border border-slate-100 flex flex-col justify-center items-center text-center md:col-span-2 lg:col-span-1 min-h-[280px]">
+                    <span class="text-3xl mb-3">📧</span>
+                    <h3 class="font-serif text-lg font-bold text-slate-900 mb-2">Kirim Pesan Lewat Gmail</h3>
+                    <p class="text-xs text-slate-600 mb-5 max-w-xs leading-relaxed">Punya pertanyaan seputar pelayanan jemaat atau permohonan doa? Klik tombol di bawah untuk langsung terhubung dengan Gmail kami.</p>
+                    <a href="mailto:gerejakalimantanevangelisbrb@gmail.com?subject=Tanya%20Pelayanan%20/%20Permohonan%20Doa%20GKE%20Barabai" class="w-full bg-[#023047] text-white py-3 rounded-lg text-xs font-bold hover:bg-slate-800 transition tracking-wider uppercase text-center shadow-xs">
+                        Buka Aplikasi Gmail
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PENDAFTARAN JEMAAT BARU -->
+    <section id="pendaftaran" class="py-16 md:py-20 bg-slate-900 text-white">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-10">
+                <h2 class="font-serif text-3xl font-bold">Pendaftaran Jemaat Baru</h2>
+                <p class="text-xs md:text-sm text-gray-400 mt-2">Mari bergabung dan bertumbuh bersama dalam iman di GKE</p>
+                <div class="w-16 h-1 bg-amber-500 mx-auto mt-4"></div>
+            </div>
+            <form id="formPendaftaran" class="bg-white text-gray-800 p-6 md:p-10 rounded-2xl shadow-xl space-y-5">
+                <div class="grid md:grid-cols-2 gap-5">
+                    <div>
+                        <label class="block text-xs md:text-sm font-semibold text-slate-700 mb-1.5">Nama Lengkap</label>
+                        <input type="text" id="nama" placeholder="Masukkan nama lengkap" class="w-full px-4 py-2.5 border rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500 text-xs md:text-sm" required>
+                    </div>
+                    <div>
+                        <label class="block text-xs md:text-sm font-semibold text-slate-700 mb-1.5">NIK (No. KTP)</label>
+                        <input type="number" id="nik" placeholder="16 Digit Nomor KTP" class="w-full px-4 py-2.5 border rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500 text-xs md:text-sm" required>
+                    </div>
+                </div>
+                <div class="grid md:grid-cols-2 gap-5">
+                    <div>
+                        <label class="block text-xs md:text-sm font-semibold text-slate-700 mb-1.5">Tempat, Tanggal Lahir</label>
+                        <input type="text" id="ttl" placeholder="Contoh: Barabai, 12-05-1995" class="w-full px-4 py-2.5 border rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500 text-xs md:text-sm" required>
+                    </div>
+                    <div>
+                        <label class="block text-xs md:text-sm font-semibold text-slate-700 mb-1.5">No. WhatsApp/Telepon</label>
+                        <input type="tel" id="whatsapp" placeholder="08xxxxxxxxxx" class="w-full px-4 py-2.5 border rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500 text-xs md:text-sm" required>
+                    </div>
+                </div>
+                <div>
+                    <label class="block text-xs md:text-sm font-semibold text-slate-700 mb-1.5">Alamat Domisili Saat Ini</label>
+                    <textarea rows="3" id="alamat" placeholder="Tuliskan alamat lengkap rumah Anda" class="w-full px-4 py-2.5 border rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500 text-xs md:text-sm" required></textarea>
+                </div>
+                <div class="grid md:grid-cols-2 gap-5">
+                    <div>
+                        <label class="block text-xs md:text-sm font-semibold text-slate-700 mb-1.5">Gereja Asal (Jika Pindahan)</label>
+                        <input type="text" id="gerejaAsal" placeholder="Tuliskan nama gereja asal jika ada" class="w-full px-4 py-2.5 border rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500 text-xs md:text-sm">
+                    </div>
+                    <div>
+                        <label class="block text-xs md:text-sm font-semibold text-slate-700 mb-1.5">Status Perkawinan</label>
+                        <select id="statusKawin" class="w-full px-4 py-2.5 border rounded-lg bg-white focus:outline-none focus:ring-2 focus:ring-amber-500 text-xs md:text-sm text-gray-600" required>
+                            <option value="" disabled selected>Pilih Status Perkawinan</option>
+                            <option value="Belum Kawin">Belum Kawin</option>
+                            <option value="Kawin Tercatat">Kawin Tercatat (Gereja & Sipil)</option>
+                            <option value="Cerai Hidup">Cerai Hidup</option>
+                            <option value="Cerai Mati">Cerai Mati</option>
+                        </select>
+                    </div>
+                </div>
+                <button type="submit" class="w-full bg-[#023047] text-white py-3 rounded-lg font-bold hover:bg-slate-800 transition duration-300 text-xs md:text-sm shadow">Kirim Formulir Pendaftaran</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-slate-950 text-gray-400 py-10 border-t border-slate-800 text-center text-xs md:text-sm px-4">
+        <p class="font-serif text-white text-base md:text-lg font-bold mb-2">Gereja Kalimantan Evangelis</p>
+        <p class="mb-3">Melayani Tuhan di Bumi Borneo dengan Kasih dan Kesetiaan.</p>
+        <p class="mb-6">&copy; 2026 Gereja Kalimantan Evangelis (GKE). All Rights Reserved.</p>
+        <div class="border-t border-slate-900 pt-5 mt-4 max-w-xs mx-auto text-[11px] text-gray-600">
+            <p class="font-semibold text-gray-500 mb-1">💻 Support Developer</p>
+            <p>DANA: <span class="font-mono text-gray-400">083853293150</span></p>
+            <p class="italic text-[10px]">A.n. BONARTHA WIBOWO SIMAREMARE</p>
+        </div>
+    </footer>
+
+    <!-- MODAL DETAIL LITURGI POPUP -->
+
+    <!-- MODAL 4 OKTOBER 2026 -->
+    <div id="modal-4oktober" class="fixed inset-0 bg-slate-900/50 backdrop-blur-xs z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-white rounded-2xl max-w-2xl w-full max-h-[85vh] overflow-y-auto p-5 md:p-8 shadow-xl">
+            <div class="border-b border-slate-200 pb-3 mb-4">
+                <h4 class="text-lg md:text-xl font-bold text-[#1e3a5f]">Detail Pelayanan - 4 Oktober 2026</h4>
+                <p class="text-xs text-amber-600 font-semibold mt-1">Hari Perjamuan Kudus Sedunia & Pekabaran Injil Indonesia (Warna Stola: Putih)</p>
+            </div>
+            <div class="text-xs md:text-sm text-slate-700 space-y-3 leading-relaxed">
+                <p><span class="font-bold text-slate-800">Pengkhotbah:</span> Pdt. Siska Pingamiani, S.Th</p>
+                <p><span class="font-bold text-slate-800">Liturgos:</span> Mahasiswa PPG</p>
+                <p><span class="font-bold text-slate-800">Lagu-lagu:</span> Tersedia pada buku Liturgi Khusus.</p>
+                <div class="bg-[#fffbeb] border-l-4 border-[#d97706] p-3 rounded-lg mt-3">
+                    <span class="font-bold text-slate-800">Catatan Pelayanan:</span> Petugas ibadah dilaksanakan oleh <span class="font-bold">Majelis Jemaat</span>.
+                </div>
+            </div>
+            <div class="mt-5 pt-4 border-t border-slate-100">
+                <button onclick="closeModal('modal-4oktober')" class="bg-slate-900 hover:bg-slate-800 text-white text-xs font-semibold px-4 py-2.5 rounded-lg">Tutup</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL 11 OKTOBER 2026 -->
+    <div id="modal-11oktober" class="fixed inset-0 bg-slate-900/50 backdrop-blur-xs z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-white rounded-2xl max-w-2xl w-full max-h-[85vh] overflow-y-auto p-5 md:p-8 shadow-xl">
+            <div class="border-b border-slate-200 pb-3 mb-4">
+                <h4 class="text-lg md:text-xl font-bold text-[#1e3a5f]">Detail Susunan Liturgi - 11 Oktober 2026 (Bentuk II / Hijau)</h4>
+                <p class="text-xs text-amber-600 font-semibold mt-1">Pengkhotbah: Pertukaran Mimbar</p>
+            </div>
+            <div class="text-xs md:text-sm text-slate-700 space-y-3 leading-relaxed">
+                <ol class="list-decimal list-inside space-y-2 text-slate-600">
+                    <li><span class="font-bold text-slate-800">PERSIAPAN/INTROITUS:</span> Doa Konsistori & Berita Jemaat</li>
+                    <li><span class="font-bold text-slate-800">MENYANYI:</span> KJ NO. 10: 1 & 2 “PUJILAH TUHAN, SANG RAJA” <span class="italic text-xs text-rose-500">(Jemaat Berdiri)</span></li>
+                    <li>Salam Presbiter</li>
+                    <li><span class="font-bold text-slate-800">VOTUM & SALAM</span> (P)</li>
+                    <li><span class="font-bold text-slate-800">MENYANYI:</span> KJ NO. 26: 1 & 2 “MAMPIRLAH, DENGAR DOAKU”</li>
+                    <li><span class="font-bold text-slate-800">DOA:</span> PENGAKUAN DOSA & UCAPAN SYUKUR (L)</li>
+                    <li><span class="font-bold text-slate-800">PEMBACAAN ALKITAB:</span> Keluaran 32:1-14</li>
+                    <li><span class="font-bold text-slate-800">MENYANYI:</span> KJ NO. 57:1 “YESUS, LIHAT UMATMU”</li>
+                    <li><span class="font-bold text-slate-800">PETUNJUK HIDUP BARU</span></li>
+                    <li><span class="font-bold text-slate-800">PEMBERITAAN FIRMAN TUHAN:</span> Matius 22:1-14</li>
+                    <li><span class="font-bold text-slate-800">DOA SYAFAAT</span></li>
+                    <li><span class="font-bold text-slate-800">MENYANYI/KOOR/VG:</span> PKJ NO. 281: 1 & 2 “TIAP ORANG HARUS TAHU”</li>
+                    <li><span class="font-bold text-slate-800">PENGAKUAN IMAN</span></li>
+                    <li><span class="font-bold text-slate-800">PERSEMBAHAN SYUKUR I & II:</span> (L) Nas Pengantar (KIS. 20:35 / Mzm. 96:7-8 / 2 Kor. 9:6-9) & Doa Persembahan</li>
+                    <li><span class="font-bold text-slate-800">MENYANYI PERSEMBAHAN:</span> PKJ NO. 148:1-DST “TRIMA KASIH YA TUHANKU”</li>
+                    <li><span class="font-bold text-slate-800">MENYANYI:</span> PKJ NO. 183:1 “MARI SEBARKAN INJIL”</li>
+                    <li><span class="font-bold text-slate-800">BERKAT</span> (P)</li>
+                </ol>
+            </div>
+            <div class="mt-5 pt-4 border-t border-slate-100">
+                <button onclick="closeModal('modal-11oktober')" class="bg-slate-900 hover:bg-slate-800 text-white text-xs font-semibold px-4 py-2.5 rounded-lg">Tutup</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL 18 OKTOBER 2026 -->
+    <div id="modal-18oktober" class="fixed inset-0 bg-slate-900/50 backdrop-blur-xs z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-white rounded-2xl max-w-2xl w-full max-h-[85vh] overflow-y-auto p-5 md:p-8 shadow-xl">
+            <div class="border-b border-slate-200 pb-3 mb-4">
+                <h4 class="text-lg md:text-xl font-bold text-[#1e3a5f]">Detail Susunan Liturgi - 18 Oktober 2026 (Bentuk III / Hijau)</h4>
+                <p class="text-xs text-amber-600 font-semibold mt-1">Pengkhotbah: Mahasiswa PPG</p>
+            </div>
+            <div class="text-xs md:text-sm text-slate-700 space-y-3 leading-relaxed">
+                <ol class="list-decimal list-inside space-y-2 text-slate-600">
+                    <li><span class="font-bold text-slate-800">PERSIAPAN/INTROITUS:</span> Doa Konsistori & Berita Jemaat</li>
+                    <li><span class="font-bold text-slate-800">MENYANYI:</span> KJ NO. 249: 1 & 2 “SERIKAT PERSAUDARAAN” <span class="italic text-xs text-rose-500">(Jemaat Berdiri)</span></li>
+                    <li>Salam Presbiter</li>
+                    <li><span class="font-bold text-slate-800">VOTUM & SALAM</span> (P)</li>
+                    <li><span class="font-bold text-slate-800">MENYANYI:</span> PKJ NO. 37: 1 & 2 “BILA KURENUNG DOSAKU”</li>
+                    <li><span class="font-bold text-slate-800">PENGAKUAN DOSA & DOA PENGAKUAN DOSA</span> (L)</li>
+                    <li><span class="font-bold text-slate-800">BERITA ANUGERAH</span></li>
+                    <li><span class="font-bold text-slate-800">PEMBACAAN ALKITAB:</span> Mazmur 24:1-10</li>
+                    <li><span class="font-bold text-slate-800">MENYANYI/KOOR/VG:</span> KJ NO. 50a: 1 & 2 “SABDAMU ABADI”</li>
+                    <li><span class="font-bold text-slate-800">PEMBERITAAN FIRMAN TUHAN:</span> Matius 22:15-22</li>
+                    <li><span class="font-bold text-slate-800">DOA SYAFAAT</span></li>
+                    <li><span class="font-bold text-slate-800">MENYANYI/KOOR/VG:</span> PKJ NO. 165: 1 & 2 “JANJI YANG MANIS”</li>
+                    <li><span class="font-bold text-slate-800">PERSEMBAHAN SYUKUR I & II:</span> (L) Nas Pengantar & Doa Persembahan</li>
+                    <li><span class="font-bold text-slate-800">MENYANYI PERSEMBAHAN:</span> PKJ NO. 146:1-DST “BAWA PERSEMBAHANMU”</li>
+                    <li><span class="font-bold text-slate-800">PENGAKUAN IMAN</span></li>
+                    <li><span class="font-bold text-slate-800">BERKAT</span></li>
+                </ol>
+            </div>
+            <div class="mt-5 pt-4 border-t border-slate-100">
+                <button onclick="closeModal('modal-18oktober')" class="bg-slate-900 hover:bg-slate-800 text-white text-xs font-semibold px-4 py-2.5 rounded-lg">Tutup</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL 25 OKTOBER 2026 -->
+    <div id="modal-25oktober" class="fixed inset-0 bg-slate-900/50 backdrop-blur-xs z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-white rounded-2xl max-w-2xl w-full max-h-[85vh] overflow-y-auto p-5 md:p-8 shadow-xl">
+            <div class="border-b border-slate-200 pb-3 mb-4">
+                <h4 class="text-lg md:text-xl font-bold text-[#1e3a5f]">Detail Pelayanan - 25 Oktober 2026</h4>
+                <p class="text-xs text-amber-600 font-semibold mt-1">Hari Reformasi & Hari Bapak GKE (Warna Stola: Putih)</p>
+            </div>
+            <div class="text-xs md:text-sm text-slate-700 space-y-3 leading-relaxed">
+                <p><span class="font-bold text-slate-800">Pengkhotbah:</span> Pdt. Siska Pingamiani, S.Th</p>
+                <p><span class="font-bold text-slate-800">Liturgos:</span> Bpk. Alexander T.H Sibarani</p>
+                <p><span class="font-bold text-slate-800">Lagu-lagu:</span> Tersedia pada buku Liturgi Khusus.</p>
+                <div class="bg-[#fffbeb] border-l-4 border-[#d97706] p-3 rounded-lg mt-3">
+                    <span class="font-bold text-slate-800">Catatan Pelayanan:</span> Petugas ibadah dilaksanakan oleh <span class="font-bold">Kaum Bapak</span>.
+                </div>
+            </div>
+            <div class="mt-5 pt-4 border-t border-slate-100">
+                <button onclick="closeModal('modal-25oktober')" class="bg-slate-900 hover:bg-slate-800 text-white text-xs font-semibold px-4 py-2.5 rounded-lg">Tutup</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- JAVASCRIPT LOGIC -->
+    <script>
+        // Toggle Mobile Menu
+        const menuBtn = document.getElementById('menuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        
+        function toggleMenu() {
+            mobileMenu.classList.toggle('hidden');
+        }
+        menuBtn.addEventListener('click', toggleMenu);
+
+        // Form Pendaftaran Jemaat Baru via WhatsApp
+        document.getElementById('formPendaftaran').addEventListener('submit', function(e) {
+            e.preventDefault(); 
+            const nomorTujuan = "6283853293150";
+            const nama = document.getElementById('nama').value;
+            const nik = document.getElementById('nik').value;
+            const ttl = document.getElementById('ttl').value;
+            const whatsapp = document.getElementById('whatsapp').value;
+            const alamat = document.getElementById('alamat').value;
+            const gerejaAsal = document.getElementById('gerejaAsal').value || "-";
+            const statusKawin = document.getElementById('statusKawin').value;
+            
+            const teksPesan = `Halo, saya ingin mendaftar sebagai Jemaat Baru GKE.%0A%0A` +
+                              `*Data Pendaftaran:*%0A` +
+                              `• Nama Lengkap: ${nama}%0A` +
+                              `• NIK: ${nik}%0A` +
+                              `• TTL: ${ttl}%0A` +
+                              `• No. WA Jemaat: ${whatsapp}%0A` +
+                              `• Alamat: ${alamat}%0A` +
+                              `• Gereja Asal: ${gerejaAsal}%0A` +
+                              `• Status Marital: ${statusKawin}`;
+            window.open(`https://wa.me/${nomorTujuan}?text=${teksPesan}`, '_blank');
+        });
+
+        // Modal Controls
+        function openModal(id) {
+            document.getElementById(id).classList.remove('hidden');
+            document.body.style.overflow = 'hidden'; 
+        }
+        function closeModal(id) {
+            document.getElementById(id).classList.add('hidden');
+            document.body.style.overflow = 'auto'; 
+        }
+        window.onclick = function(event) {
+            if (event.target.classList.contains('bg-slate-900/50')) {
+                event.target.classList.add('hidden');
+                document.body.style.overflow = 'auto';
+            }
+        }
+    </script>
+</body>
+</html>
